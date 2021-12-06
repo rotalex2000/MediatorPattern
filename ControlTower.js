@@ -10,4 +10,12 @@ class ControlTower {
       console.log(`Airplane ${airplane.name} successfully registered.`);
     }
   }
+
+  canTakeOff(airplane) {}
+
+  canLand(airplane) {}
+
+  hasLanded(airplane) {}
+
+  hasTakenOff(airplane) {}
 }
