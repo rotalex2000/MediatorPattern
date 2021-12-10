@@ -1,6 +1,7 @@
 class ControlTower {
   constructor() {
     this.airplanes = [];
+    this.isTrackFree = true;
   }
 
   registerAirplane(airplane) {
@@ -11,11 +12,17 @@ class ControlTower {
     }
   }
 
-  canTakeOff(airplane) {}
+  canTakeOff(airplane) {
+    return this.isTrackFree();
+  }
 
-  canLand(airplane) {}
+  canLand(airplane) {
+    return this.isTrackFree();
+  }
 
   hasLanded(airplane) {}
 
   hasTakenOff(airplane) {}
 }
+
+export default ControlTower;

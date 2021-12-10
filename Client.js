@@ -1,18 +1,13 @@
-function run() {
-  var yoko = new Participant("Yoko");
-  var john = new Participant("John");
-  var paul = new Participant("Paul");
-  var ringo = new Participant("Ringo");
+import { Airplane } from "./Airplane";
+import { ControlTower } from "./ControlTower";
 
-  var chatroom = new Chatroom();
-  chatroom.register(yoko);
-  chatroom.register(john);
-  chatroom.register(paul);
-  chatroom.register(ringo);
+var a1 = new Airplane("A1");
+var a2 = new Airplane("A2");
+var a3 = new Airplane("A3");
+var a4 = new Airplane("A4");
 
-  yoko.send("All you need is love.");
-  yoko.send("I love you John.");
-  john.send("Hey, no need to broadcast", yoko);
-  paul.send("Ha, I heard that!");
-  ringo.send("Paul, what do you think?", paul);
-}
+var controlTower = new ControlTower();
+controlTower.registerAirplane(a1);
+controlTower.registerAirplane(a2);
+controlTower.registerAirplane(a3);
+controlTower.registerAirplane(a4);
